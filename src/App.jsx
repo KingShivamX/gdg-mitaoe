@@ -1,10 +1,23 @@
 import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Game from "./pages/Game"
+import Results from "./pages/Results"
+import Leaderboard from "./pages/Leaderboard"
+import Layout from "./components/Layout"
 
 const App = () => {
     return (
-        <div className="text-3xl font-bold underline">
-            chakko ki koi kami nahi hai desh mein
-        </div>
+        <Router>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/game" element={<Game />} />
+                    <Route path="/results" element={<Results />} />
+                    <Route path="/leaderboard" element={<Leaderboard />} />
+                </Routes>
+            </Layout>
+        </Router>
     )
 }
 
