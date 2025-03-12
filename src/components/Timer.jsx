@@ -20,7 +20,7 @@ const Timer = ({ duration, onTimeUp }) => {
     const percentage = (timeLeft / duration) * 100
 
     return (
-        <div className="w-32">
+        <div className="w-full sm:w-32">
             <div className="mb-1 flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-700">
                     Time left

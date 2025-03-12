@@ -83,8 +83,8 @@ const Game = () => {
         return <div className="text-center py-10">Loading questions...</div>
 
     return (
-        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
-            <div className="flex justify-between items-center mb-6">
+        <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-4 md:p-8">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-3">
                 <div className="text-lg font-medium">
                     Question {currentQuestionIndex + 1} of{" "}
                     {randomQuestions.length}
@@ -97,7 +97,7 @@ const Game = () => {
             </div>
 
             <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">
+                <h2 className="text-xl md:text-2xl font-bold mb-4">
                     {currentQuestion.text}
                 </h2>
                 <div className="space-y-3">
@@ -105,7 +105,7 @@ const Game = () => {
                         <button
                             key={index}
                             onClick={() => handleAnswerSelect(index)}
-                            className={`w-full text-left p-4 rounded-lg border transition-colors ${
+                            className={`w-full text-left p-3 md:p-4 rounded-lg border transition-colors ${
                                 selectedAnswers[currentQuestionIndex] === index
                                     ? "bg-blue-100 border-blue-500"
                                     : "bg-white border-gray-300 hover:bg-gray-50"
@@ -117,9 +117,9 @@ const Game = () => {
                 </div>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div className="text-sm text-gray-500">
-                    Time remaining for this question:{" "}
+                    Time remaining:{" "}
                     <span className="font-medium">20 seconds</span>
                 </div>
                 <div className="text-sm text-gray-500">

@@ -44,13 +44,13 @@ const Results = () => {
     }
 
     return (
-        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
-            <h1 className="text-3xl font-bold text-center mb-6">
+        <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-4 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-center mb-6">
                 Your Results
             </h1>
 
-            <div className="bg-blue-50 rounded-lg p-6 mb-8 text-center">
-                <h2 className="text-4xl font-bold text-blue-600 mb-2">
+            <div className="bg-blue-50 rounded-lg p-4 md:p-6 mb-6 md:mb-8 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {score} / {totalQuestions}
                 </h2>
                 <p className="text-gray-700">
@@ -59,11 +59,11 @@ const Results = () => {
             </div>
 
             {!isSubmitted ? (
-                <form onSubmit={handleSubmitScore} className="mb-8">
-                    <h3 className="text-xl font-semibold mb-4">
+                <form onSubmit={handleSubmitScore} className="mb-6 md:mb-8">
+                    <h3 className="text-lg md:text-xl font-semibold mb-4">
                         Save your score to the leaderboard
                     </h3>
-                    <div className="flex gap-2">
+                    <div className="flex flex-col sm:flex-row gap-2">
                         <input
                             type="text"
                             value={playerName}
@@ -81,23 +81,23 @@ const Results = () => {
                     </div>
                 </form>
             ) : (
-                <div className="text-center mb-8">
+                <div className="text-center mb-6 md:mb-8">
                     <p className="text-green-600 font-medium mb-4">
                         Your score has been added to the leaderboard!
                     </p>
                 </div>
             )}
 
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
                 <Link
                     to="/"
-                    className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-6 rounded-lg transition-colors"
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-6 rounded-lg transition-colors text-center"
                 >
                     Back to Home
                 </Link>
                 <Link
                     to="/leaderboard"
-                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center"
                 >
                     View Leaderboard
                 </Link>
