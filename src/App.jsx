@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Game from "./pages/Game"
 import Results from "./pages/Results"
-import Leaderboard from "./pages/Leaderboard"
+import EmojiGame from "./pages/EmojiGame"
+import EmojiResults from "./pages/EmojiResults"
 import Layout from "./components/Layout"
 
 const App = () => {
@@ -14,7 +15,8 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/game" element={<Game />} />
                     <Route path="/results" element={<Results />} />
-                    <Route path="/leaderboard" element={<Leaderboard />} />
+                    <Route path="/emoji-game" element={<EmojiGame />} />
+                    <Route path="/emoji-results" element={<EmojiResults />} />
                 </Routes>
             </Layout>
         </Router>

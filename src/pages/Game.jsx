@@ -90,7 +90,7 @@ const Game = () => {
                     {randomQuestions.length}
                 </div>
                 <Timer
-                    duration={20}
+                    duration={15}
                     onTimeUp={handleTimeUp}
                     key={currentQuestionIndex}
                 />
@@ -120,7 +120,7 @@ const Game = () => {
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div className="text-sm text-gray-500">
                     Time remaining:{" "}
-                    <span className="font-medium">20 seconds</span>
+                    <span className="font-medium">15 seconds</span>
                 </div>
                 <div className="text-sm text-gray-500">
                     Progress:{" "}

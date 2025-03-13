@@ -56,12 +56,6 @@ const Layout = ({ children }) => {
                         >
                             Home
                         </Link>
-                        <Link
-                            to="/leaderboard"
-                            className="text-gray-600 hover:text-blue-500 transition-colors text-lg font-medium"
-                        >
-                            Leaderboard
-                        </Link>
                     </nav>
                 </div>
 
@@ -74,13 +68,6 @@ const Layout = ({ children }) => {
                             onClick={() => setMenuOpen(false)}
                         >
                             Home
-                        </Link>
-                        <Link
-                            to="/leaderboard"
-                            className="block py-2 text-gray-600 hover:text-blue-500 transition-colors"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Leaderboard
                         </Link>
                     </div>
                 )}
